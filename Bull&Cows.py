@@ -91,4 +91,8 @@ while True:
     if bulls == 4:
         print("Correct, you’ve guessed the right number!")
         print(cara)
-    break
+
+    if not pokracovani_hry():
+        print("Thank you for playing! :)")
+        print(cara)
+        break
