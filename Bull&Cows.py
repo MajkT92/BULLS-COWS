@@ -75,6 +75,13 @@ def pocet_bulls_cows(spravny_vystup_uzivatele, nahodne_cislo):
 
     return bulls
 
+
+#uži. funce zda chce uživatel pokračovat v hraní nebo ne
+def pokracovani_hry():
+    odpoved = input('Next round? (y/n): ')
+    if odpoved in ('y', 'n'):
+        return odpoved == 'y'
+
 #while loop samotné hry
 
 while True:
