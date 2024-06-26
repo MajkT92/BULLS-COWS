@@ -23,8 +23,11 @@ hello_user()
 #funkce na generování čísel
 def generovani_cisel():
 
-    nahodne = random.randint(1000,9999)
-    return nahodne
+    while True:
+        nahodne = random.randint(1000, 9999)
+        nahodne_str = str(nahodne)
+        if len(set(nahodne_str)) == 4:
+            return nahodne
 
 nahodne_cislo = generovani_cisel()
 
