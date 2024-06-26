@@ -96,3 +96,7 @@ while True:
         print("Thank you for playing! :)")
         print(cara)
         break
+
+    else:
+        print("Starting a new game...")
+        print(cara)
