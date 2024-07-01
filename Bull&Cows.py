@@ -31,7 +31,7 @@ def generovani_cisel():
 
 nahodne_cislo = generovani_cisel()
 
-#uži. funkce pro zadání vstupu uživatelem
+
 #uži. funkce pro zadání vstupu uživatelem
 def vstup_uzivatele():
     while True:
@@ -78,21 +78,30 @@ def pocet_bulls_cows(spravny_vystup_uzivatele, nahodne_cislo):
 
 #uži. funce zda chce uživatel pokračovat v hraní nebo ne
 def pokracovani_hry():
-    odpoved = input('Next round? (y/n): ')
-    if odpoved in ('y', 'n'):
-        return odpoved == 'y'
+    while True:
+        odpoved = input('You wanna keep playing? (y/n) ')
+        if odpoved.lower() in ('y', 'n'):
+            return odpoved.lower() == 'n'
+        print("Please enter 'y' or 'n'.")
 
 #while loop samotné hry
 
 while True:
-    spravny_vystup_uzivatele = vstup_uzivatele()
-    bulls = pocet_bulls_cows(spravny_vystup_uzivatele,nahodne_cislo)
 
-    if bulls == 4:
-        print("Correct, you’ve guessed the right number!")
-        print(cara)
+    nahodne_cislo = generovani_cisel()
+    print(f"Random number (for debugging): {nahodne_cislo}")
 
-    if not pokracovani_hry():
+    #přídání dalšího while loop pro hraní do té doby než to uživ. nepřeruší
+    while True:
+        spravny_vystup_uzivatele = vstup_uzivatele()
+        bulls = pocet_bulls_cows(spravny_vystup_uzivatele, nahodne_cislo)
+
+        if bulls == 4:
+            print("Correct, you’ve guessed the right number!")
+            print(cara)
+            break
+
+    if pokracovani_hry():
         print("Thank you for playing! :)")
         print(cara)
         break
