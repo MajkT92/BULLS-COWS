@@ -79,7 +79,7 @@ def pocet_bulls_cows(spravny_vystup_uzivatele, nahodne_cislo):
 #uži. funce zda chce uživatel pokračovat v hraní nebo ne
 def pokracovani_hry():
     while True:
-        odpoved = input('You wanna keep playing? (y/n) ')
+        odpoved = input('You wanna keep playing? (y/n)')
         if odpoved.lower() in ('y', 'n'):
             return odpoved.lower() == 'n'
         print("Please enter 'y' or 'n'.")
