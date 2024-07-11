@@ -65,7 +65,7 @@ def pocet_bulls_cows(spravny_vystup_uzivatele, nahodne_cislo):
         if spravny_vystup_uzivatele[i] == str(nahodne_cislo)[i]:
             bulls += 1
 
-        elif spravny_vystup_uzivatele[i] in str(nahodne_cislo)[i]:
+        elif spravny_vystup_uzivatele[i] in str(nahodne_cislo):
             cows += 1
 
 #ověření jednotného / množného čísla bull & cow
@@ -89,7 +89,6 @@ def pokracovani_hry():
 while True:
 
     nahodne_cislo = generovani_cisel()
-    print(f"Random number (for debugging): {nahodne_cislo}")
 
     #přídání dalšího while loop pro hraní do té doby než to uživ. nepřeruší
     while True:
