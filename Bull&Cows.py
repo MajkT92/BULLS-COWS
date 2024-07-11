@@ -65,8 +65,8 @@ def pocet_bulls_cows(spravny_vystup_uzivatele, nahodne_cislo):
         if spravny_vystup_uzivatele[i] == str(nahodne_cislo)[i]:
             bulls += 1
 
-    elif spravny_vystup_uzivatele[i] in str(nahodne_cislo):
-    cows += 1
+        elif spravny_vystup_uzivatele[i] in str(nahodne_cislo):
+            cows += 1
 
 #ověření jednotného / množného čísla bull & cow
     pocet_bull = "bull" if bulls == 1 else "bulls"
